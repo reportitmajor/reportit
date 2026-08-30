@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Report-It</string>
+    <string name="tagline">Report. Resolve. Transform.</string>
+    
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_reports">My Reports</string>
+    <string name="nav_report_issue">Report</string>
+    <string name="nav_map">Issue Map</string>
+    <string name="nav_track">Track</string>
+    <string name="nav_profile">Profile</string>
+    <string name="nav_admin">Admin</string>
+    
+    <!-- General -->
+    <string name="location_placeholder">📍 Bengaluru, Karnataka</string>
+    <string name="language_btn">🌐 Language</string>
+    <string name="report_cta">🚨 Report an Issue</string>
+    <string name="recent_reports">Recent Reports</string>
+    <string name="civic_impact">Civic Impact</string>
+</resources>
