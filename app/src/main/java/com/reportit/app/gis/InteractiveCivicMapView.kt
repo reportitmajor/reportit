@@ -227,10 +227,12 @@ class InteractiveCivicMapView @JvmOverloads constructor(
                 }
 
                 // Main Marker Circle
-                val pinColor = when (report.status) {
-                    ReportStatus.RESOLVED, ReportStatus.CITIZEN_CLOSED -> Color.parseColor("#059669") // Green
-                    ReportStatus.IN_PROGRESS, ReportStatus.ASSIGNED, ReportStatus.AI_ANALYZED, ReportStatus.VERIFIED -> Color.parseColor("#F59E0B") // Amber
-                    ReportStatus.ESCALATED -> Color.parseColor("#DC2626") // Red
+                val pinColor = when {
+                    report.status == ReportStatus.RESOLVED || report.status == ReportStatus.CITIZEN_CLOSED -> Color.parseColor("#059669") // Green
+                    report.severity == ReportSeverity.CRITICAL || report.status == ReportStatus.ESCALATED -> Color.parseColor("#DC2626") // Red
+                    report.severity == ReportSeverity.HIGH -> Color.parseColor("#EA580C") // Orange-Red
+                    report.severity == ReportSeverity.MEDIUM -> Color.parseColor("#F59E0B") // Yellow / Amber
+                    report.severity == ReportSeverity.LOW -> Color.parseColor("#10B981") // Green
                     else -> Color.parseColor(report.severity.colorHex)
                 }
 

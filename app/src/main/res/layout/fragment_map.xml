@@ -245,6 +245,117 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
+            <!-- Floating Severity Legend & Quick Filter Strip -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginTop="122dp"
+                android:paddingHorizontal="16dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- All Issues Pill -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/chipFilterAll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="2dp"
+                        app:strokeColor="#0066FF"
+                        app:strokeWidth="1.5dp">
+
+                        <TextView
+                            android:id="@+id/tvChipAll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingHorizontal="12dp"
+                            android:text="🌐 All Issues"
+                            android:textColor="#0066FF"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Critical (Red) Pill -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/chipFilterCritical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="8dp"
+                        app:cardBackgroundColor="#FEE2E2"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="2dp"
+                        app:strokeColor="#DC2626"
+                        app:strokeWidth="1dp">
+
+                        <TextView
+                            android:id="@+id/tvChipCritical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingHorizontal="12dp"
+                            android:text="🔴 Critical"
+                            android:textColor="#B91C1C"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Medium / In Progress (Yellow) Pill -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/chipFilterMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="8dp"
+                        app:cardBackgroundColor="#FEF3C7"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="2dp"
+                        app:strokeColor="#D97706"
+                        app:strokeWidth="1dp">
+
+                        <TextView
+                            android:id="@+id/tvChipMedium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingHorizontal="12dp"
+                            android:text="🟡 In Progress"
+                            android:textColor="#B45309"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Resolved (Green) Pill -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/chipFilterResolved"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="8dp"
+                        app:cardBackgroundColor="#DCFCE7"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="2dp"
+                        app:strokeColor="#16A34A"
+                        app:strokeWidth="1dp">
+
+                        <TextView
+                            android:id="@+id/tvChipResolved"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingHorizontal="12dp"
+                            android:text="🟢 Resolved"
+                            android:textColor="#15803D"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+            </HorizontalScrollView>
+
             <!-- ================= FLOATING RIGHT MAP CONTROLS ================= -->
             <LinearLayout
                 android:layout_width="wrap_content"

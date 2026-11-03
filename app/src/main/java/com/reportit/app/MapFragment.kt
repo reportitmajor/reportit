@@ -441,12 +441,46 @@ class MapFragment : Fragment() {
         binding.btnMapZoomOut.setOnClickListener { binding.interactiveMapView.zoomOut() }
         binding.btnMapSeeAll.setOnClickListener { expandNearbySheet() }
 
+        binding.chipFilterAll.setOnClickListener { filterMapBySeverity("ALL") }
+        binding.chipFilterCritical.setOnClickListener { filterMapBySeverity("CRITICAL") }
+        binding.chipFilterMedium.setOnClickListener { filterMapBySeverity("IN_PROGRESS") }
+        binding.chipFilterResolved.setOnClickListener { filterMapBySeverity("RESOLVED") }
+
         binding.interactiveMapView.onReportSelected = { report ->
             showSelectedIssueDetail(report)
         }
         binding.interactiveMapView.onMapClicked = {
             hideSelectedIssueDetail()
         }
+    }
+
+    private fun filterMapBySeverity(type: String) {
+        val filtered = when (type) {
+            "CRITICAL" -> allRealReports.filter {
+                it.severity == ReportSeverity.CRITICAL || it.severity == ReportSeverity.HIGH || it.status == ReportStatus.ESCALATED
+            }
+            "IN_PROGRESS" -> allRealReports.filter {
+                it.status == ReportStatus.IN_PROGRESS || it.status == ReportStatus.ASSIGNED || it.severity == ReportSeverity.MEDIUM
+            }
+            "RESOLVED" -> allRealReports.filter {
+                it.status == ReportStatus.RESOLVED || it.status == ReportStatus.CITIZEN_CLOSED || it.severity == ReportSeverity.LOW
+            }
+            else -> allRealReports
+        }
+
+        binding.interactiveMapView.setReports(filtered)
+        populateNearbySheet(filtered)
+
+        val density = resources.displayMetrics.density
+        val activeWidth = (2 * density).toInt()
+        val defaultWidth = (1 * density).toInt()
+
+        binding.chipFilterAll.strokeWidth = if (type == "ALL") activeWidth else defaultWidth
+        binding.chipFilterCritical.strokeWidth = if (type == "CRITICAL") activeWidth else defaultWidth
+        binding.chipFilterMedium.strokeWidth = if (type == "IN_PROGRESS") activeWidth else defaultWidth
+        binding.chipFilterResolved.strokeWidth = if (type == "RESOLVED") activeWidth else defaultWidth
+
+        Toast.makeText(requireContext(), "Showing ${filtered.size} issues", Toast.LENGTH_SHORT).show()
     }
 
     private fun expandNearbySheet() {
