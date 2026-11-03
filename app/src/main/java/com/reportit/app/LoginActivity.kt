@@ -24,6 +24,7 @@ import com.google.firebase.auth.UserProfileChangeRequest
 import com.reportit.app.data.repository.FirestoreRepository
 import com.reportit.app.data.session.SessionManager
 import com.reportit.app.databinding.ActivityLoginBinding
+import com.reportit.app.utils.LocaleHelper
 
 class LoginActivity : AppCompatActivity() {
 
@@ -33,6 +34,15 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var googleSignInClient: GoogleSignInClient
 
     private var isSignUpMode = false
+
+    override fun attachBaseContext(newBase: android.content.Context) {
+        super.attachBaseContext(LocaleHelper.wrap(newBase))
+    }
+
+    override fun applyOverrideConfiguration(overrideConfiguration: android.content.res.Configuration?) {
+        LocaleHelper.applyConfiguration(overrideConfiguration, this)
+        super.applyOverrideConfiguration(overrideConfiguration)
+    }
 
     companion object {
         // Web Client ID configured in Google Cloud Console / Firebase OAuth

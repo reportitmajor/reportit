@@ -22,6 +22,28 @@
     <string name="citizen_score_title">మన పౌర స్కోరు</string>
     <string name="citizen_score_value">95 / 100 • పౌర ఛాంపియన్</string>
     
+    <!-- Home Section Strings -->
+    <string name="home_report_title">సమస్యను నివేదించండి</string>
+    <string name="home_report_desc">ఫోటో తీయండి, వివరాలు తెలపండి, సంబంధిత విభాగానికి చేరుస్తాము.</string>
+    <string name="home_report_cta">ఫిర్యాదు చేయండి</string>
+    <string name="home_my_reports">నా ఫిర్యాదులు</string>
+    <string name="home_view_all">అన్నీ చూడండి ›</string>
+    <string name="home_issues_around">మీ చుట్టూ ఉన్న సమస్యలు</string>
+    <string name="home_explore_more">మరిన్ని సేవలు</string>
+    <string name="home_heatmap">పౌర హీట్‌మ్యాప్</string>
+    <string name="home_emergency">అత్యవసరం</string>
+    <string name="home_civic_score">పౌర స్కోరు</string>
+    <string name="home_know_depts">విభాగాల వివరాలు</string>
+    <string name="home_live_updates">లైవ్ అప్‌డేట్లు</string>
+    <string name="home_tagline">పరిశుభ్రమైన బెంగళూరు కోసం కలిసికట్టుగా</string>
+    <string name="home_ai_identifies">AI సమస్యను\nగుర్తిస్తుంది</string>
+    <string name="home_auto_routes">విభాగానికి\nపంపుతుంది</string>
+    <string name="home_track_till">పరిష్కారం వరకు\nట్రాక్ చేయండి</string>
+    <string name="home_see_hotspots">సమస్య ప్రాంతాలను చూడండి</string>
+    <string name="home_urgent_help">అత్యవసర హెల్ప్‌లైన్లు</string>
+    <string name="home_impact_matters">మీ పాత్ర ముఖ్యం</string>
+    <string name="home_roles_services">విభాగాలు &amp; సేవలు</string>
+
     <!-- Categories -->
     <string name="cat_pothole">రోడ్లు &amp; గుంతలు</string>
     <string name="cat_pothole_sub">బీబీఎంపీ రోడ్ ఇన్ఫ్రా</string>
@@ -52,4 +74,3 @@
     <string name="gps_locked">📍 లైవ్ జీపీఎస్ వార్డు లాక్ చేయబడింది</string>
     <string name="gps_failed">⚠️ జీపీఎస్ సిగ్నల్ లభించలేదు. దయచేసి లొకేషన్ ఆన్ చేయండి.</string>
 </resources>
-

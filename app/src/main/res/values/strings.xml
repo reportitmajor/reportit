@@ -21,6 +21,28 @@
     <string name="citizen_score_title">Namma Nagarika Score</string>
     <string name="citizen_score_value">95 / 100 • Civic Champion</string>
     
+    <!-- Home Section Strings -->
+    <string name="home_report_title">Report a Civic Issue</string>
+    <string name="home_report_desc">Take a photo, tell us briefly and we\'ll route it to the right authority.</string>
+    <string name="home_report_cta">Report Now</string>
+    <string name="home_my_reports">My Reports</string>
+    <string name="home_view_all">View All ›</string>
+    <string name="home_issues_around">Civic Issues Around You</string>
+    <string name="home_explore_more">Explore More</string>
+    <string name="home_heatmap">Civic Heatmap</string>
+    <string name="home_emergency">Emergency</string>
+    <string name="home_civic_score">My Civic Score</string>
+    <string name="home_know_depts">Know Depts</string>
+    <string name="home_live_updates">Live Updates</string>
+    <string name="home_tagline">Together for a cleaner, better Bengaluru</string>
+    <string name="home_ai_identifies">AI Identifies\nthe issue</string>
+    <string name="home_auto_routes">Auto-routes\nto authority</string>
+    <string name="home_track_till">Track till\nit\'s resolved</string>
+    <string name="home_see_hotspots">See problem hotspots</string>
+    <string name="home_urgent_help">Urgent issues &amp; helplines</string>
+    <string name="home_impact_matters">Your impact matters</string>
+    <string name="home_roles_services">Roles &amp; services</string>
+
     <!-- Categories -->
     <string name="cat_pothole">Roads &amp; Potholes</string>
     <string name="cat_pothole_sub">BBMP Road Infra</string>

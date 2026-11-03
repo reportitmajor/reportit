@@ -22,6 +22,28 @@
     <string name="citizen_score_title">நம்ம குடிமக்கள் மதிப்பெண்</string>
     <string name="citizen_score_value">95 / 100 • மக்கள் சாம்பியன்</string>
     
+    <!-- Home Section Strings -->
+    <string name="home_report_title">புகார் பதிவு செய்க</string>
+    <string name="home_report_desc">புகைப்படம் எடுங்கள், சுருக்கமாக விளக்குங்கள், உரிய அதிகாரியிடம் சேர்ப்போம்.</string>
+    <string name="home_report_cta">இப்போதே புகார் செய்</string>
+    <string name="home_my_reports">என் புகார்கள்</string>
+    <string name="home_view_all">அனைத்தும் பார்க்க ›</string>
+    <string name="home_issues_around">உங்களைச் சுற்றியுள்ள புகார்கள்</string>
+    <string name="home_explore_more">கூடுதல் சேவைகள்</string>
+    <string name="home_heatmap">மக்கள் வரைபடம்</string>
+    <string name="home_emergency">அவசர உதவி</string>
+    <string name="home_civic_score">குடிமக்கள் மதிப்பெண்</string>
+    <string name="home_know_depts">துறை விவரங்கள்</string>
+    <string name="home_live_updates">நேரலை தகவல்</string>
+    <string name="home_tagline">தூய்மையான பெங்களூருக்கு ஒன்றாக இணைவோம்</string>
+    <string name="home_ai_identifies">AI சிக்கலை\nகண்டறியும்</string>
+    <string name="home_auto_routes">துறைக்கு\nஅனுப்பப்படும்</string>
+    <string name="home_track_till">தீர்வு வரை\nகண்காணியுங்கள்</string>
+    <string name="home_see_hotspots">பிரச்சினை பகுதிகளைப் பார்க்கவும்</string>
+    <string name="home_urgent_help">அவசர உதவி எண்கள்</string>
+    <string name="home_impact_matters">உங்கள் பங்களிப்பு முக்கியம்</string>
+    <string name="home_roles_services">துறைகள் &amp; சேவைகள்</string>
+
     <!-- Categories -->
     <string name="cat_pothole">சாலைகள் &amp; குழிகள்</string>
     <string name="cat_pothole_sub">பிபிஎம்பி சாலை உள்கட்டமைப்பு</string>
@@ -52,4 +74,3 @@
     <string name="gps_locked">📍 நேரடி ஜிபிஎஸ் வார்டு கண்டறியப்பட்டது</string>
     <string name="gps_failed">⚠️ ஜிபிஎஸ் சிக்னல் இல்லை. இருப்பிடத்தை இயக்கவும்.</string>
 </resources>
-

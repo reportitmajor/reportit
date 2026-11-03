@@ -22,6 +22,28 @@
     <string name="citizen_score_title">हमारा नागरिक स्कोर</string>
     <string name="citizen_score_value">95 / 100 • नागरिक चैंपियन</string>
     
+    <!-- Home Section Strings -->
+    <string name="home_report_title">नागरिक समस्या रिपोर्ट करें</string>
+    <string name="home_report_desc">फोटो लें, संक्षेप में बताएं और हम सही विभाग तक पहुंचाएंगे।</string>
+    <string name="home_report_cta">रिपोर्ट करें</string>
+    <string name="home_my_reports">मेरी शिकायतें</string>
+    <string name="home_view_all">सभी देखें ›</string>
+    <string name="home_issues_around">आपके आस-पास की समस्याएं</string>
+    <string name="home_explore_more">और सेवाएं देखें</string>
+    <string name="home_heatmap">नागरिक हीटमैप</string>
+    <string name="home_emergency">आपातकालीन</string>
+    <string name="home_civic_score">नागरिक स्कोर</string>
+    <string name="home_know_depts">विभाग विवरण</string>
+    <string name="home_live_updates">लाइव अपडेट</string>
+    <string name="home_tagline">स्वच्छ और बेहतर बेंगलुरु के लिए मिलकर</string>
+    <string name="home_ai_identifies">एआई समस्या\nपहचानता है</string>
+    <string name="home_auto_routes">विभाग को\nभेजता है</string>
+    <string name="home_track_till">समाधान तक\nट्रैक करें</string>
+    <string name="home_see_hotspots">समस्या क्षेत्र देखें</string>
+    <string name="home_urgent_help">आपातकालीन हेल्पलाइन</string>
+    <string name="home_impact_matters">आपका योगदान महत्वपूर्ण है</string>
+    <string name="home_roles_services">भूमिकाएं और सेवाएं</string>
+
     <!-- Categories -->
     <string name="cat_pothole">सड़कें और गड्ढे</string>
     <string name="cat_pothole_sub">बीबीएमपी रोड इन्फ्रा</string>
@@ -52,4 +74,3 @@
     <string name="gps_locked">📍 लाइव जीपीएस वार्ड लॉक किया गया</string>
     <string name="gps_failed">⚠️ जीपीएस सिग्नल नहीं मिला। कृपया लोकेशन ऑन करें।</string>
 </resources>
-

@@ -43,6 +43,17 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Top Header Controls
+        val prefs = requireContext().getSharedPreferences("reportit_lang_pref", android.content.Context.MODE_PRIVATE)
+        val currentTag = prefs.getString("selected_lang_tag", "en") ?: "en"
+        val badgeText = when (currentTag) {
+            "kn" -> "ಕನ್ನಡ"
+            "hi" -> "हिन्दी"
+            "ta" -> "தமிழ்"
+            "te" -> "తెలుగు"
+            else -> "EN"
+        }
+        binding.tvLanguageBadge.text = badgeText
+
         binding.btnCitySelector.setOnClickListener {
             Toast.makeText(requireContext(), "📍 Bengaluru Urban District (BBMP Area)", Toast.LENGTH_SHORT).show()
         }
@@ -122,9 +133,13 @@ class HomeFragment : Fragment() {
         detectLiveWardFromGps()
     }
 
-    private fun detectLiveWardFromGps() {
-        if (!LocationHelper.hasLocationPermission(requireContext())) return
+    fun detectLiveWardFromGps() {
+        if (!LocationHelper.hasLocationPermission(requireContext())) {
+            binding.tvCurrentWard.text = getString(R.string.default_ward)
+            return
+        }
 
+        binding.tvCurrentWard.text = "🛰️ Detecting live GPS ward..."
         LocationHelper.fetchCurrentLocation(requireContext()) { lat, lon, _, isRealGps ->
             activity?.runOnUiThread {
                 if (_binding != null && isRealGps && lat != 0.0 && lon != 0.0) {

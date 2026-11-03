@@ -22,6 +22,28 @@
     <string name="citizen_score_title">ನಮ್ಮ ನಾಗರಿಕ ಸ್ಕೋರ್</string>
     <string name="citizen_score_value">95 / 100 • ನಾಗರಿಕ ಚಾಂಪಿಯನ್</string>
     
+    <!-- Home Section Strings -->
+    <string name="home_report_title">ನಾಗರಿಕ ಸಮಸ್ಯೆ ವರದಿ ಮಾಡಿ</string>
+    <string name="home_report_desc">ಫೋಟೋ ತೆಗೆಯಿರಿ, ವಿವರ ನೀಡಿ, ನಾವು ಸಂಬಂಧಪಟ್ಟ ಇಲಾಖೆಗೆ ತಲುಪಿಸುತ್ತೇವೆ.</string>
+    <string name="home_report_cta">ದೂರು ದಾಖಲಿಸಿ</string>
+    <string name="home_my_reports">ನನ್ನ ವರದಿಗಳು</string>
+    <string name="home_view_all">ಎಲ್ಲವನ್ನೂ ವೀಕ್ಷಿಸಿ ›</string>
+    <string name="home_issues_around">ನಿಮ್ಮ ಸುತ್ತಲಿನ ಸಮಸ್ಯೆಗಳು</string>
+    <string name="home_explore_more">ಇನ್ನಷ್ಟು ಸೇವೆಗಳು</string>
+    <string name="home_heatmap">ನಾಗರಿಕ ಹೀಟ್‌ಮ್ಯಾಪ್</string>
+    <string name="home_emergency">ತುರ್ತು ಸೇವೆ</string>
+    <string name="home_civic_score">ನಾಗರಿಕ ಅಂಕ</string>
+    <string name="home_know_depts">ಇಲಾಖೆಗಳ ಮಾಹಿತಿ</string>
+    <string name="home_live_updates">ಲೈವ್ ಮಾಹಿತಿ</string>
+    <string name="home_tagline">ಸ್ವಚ್ಛ, ಸುಂದರ ಬೆಂಗಳೂರಿಗಾಗಿ ಒಟ್ಟಾಗಿ</string>
+    <string name="home_ai_identifies">ಎಐ ಸಮಸ್ಯೆ\nಗುರುತಿಸುತ್ತದೆ</string>
+    <string name="home_auto_routes">ಇಲಾಖೆಗೆ\nರವಾನೆ</string>
+    <string name="home_track_till">ಪರಿಹಾರದವರೆಗೆ\nಟ್ರ್ಯಾಕ್ ಮಾಡಿ</string>
+    <string name="home_see_hotspots">ಸಮಸ್ಯೆಯ ಪ್ರದೇಶಗಳನ್ನು ನೋಡಿ</string>
+    <string name="home_urgent_help">ತುರ್ತು ಸಹಾಯವಾಣಿಗಳು</string>
+    <string name="home_impact_matters">ನಿಮ್ಮ ಕೊಡುಗೆ ಮುಖ್ಯ</string>
+    <string name="home_roles_services">ಪಾತ್ರಗಳು ಮತ್ತು ಸೇವೆಗಳು</string>
+
     <!-- Categories -->
     <string name="cat_pothole">ರಸ್ತೆಗಳು ಮತ್ತು ಗುಂಡಿಗಳು</string>
     <string name="cat_pothole_sub">ಬಿಬಿಎಂಪಿ ರಸ್ತೆ ಮೂಲಸೌಕರ್ಯ</string>
@@ -52,4 +74,3 @@
     <string name="gps_locked">📍 ಲೈವ್ ಜಿಪಿಎಸ್ ವಾರ್ಡ್ ಪತ್ತೆಯಾಗಿದೆ</string>
     <string name="gps_failed">⚠️ ಜಿಪಿಎಸ್ ಸಿಗ್ನಲ್ ಲಭ್ಯವಿಲ್ಲ. ದಯವಿಟ್ಟು ಲೊಕೇಶನ್ ಆನ್ ಮಾಡಿ.</string>
 </resources>
-

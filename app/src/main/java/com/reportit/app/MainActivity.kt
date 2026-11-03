@@ -1,16 +1,18 @@
 package com.reportit.app
 
+import android.Manifest
 import android.content.Context
+import android.content.Intent
 import android.content.res.ColorStateList
+import android.content.res.Configuration
 import android.graphics.Color
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.app.AppCompatDelegate
-import androidx.core.os.LocaleListCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
@@ -19,21 +21,16 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.onesignal.OneSignal
 import com.onesignal.user.subscriptions.IPushSubscriptionObserver
 import com.reportit.app.databinding.ActivityMainBinding
+import com.reportit.app.utils.LocaleHelper
+import com.reportit.app.utils.LocationHelper
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-    private val languages = arrayOf(
-        "English (Default)",
-        "ಕನ್ನಡ (Kannada)",
-        "हिन्दी (Hindi)",
-        "தமிழ் (Tamil)",
-        "తెలుగు (Telugu)"
-    )
-    private val languageTags = arrayOf("en", "kn", "hi", "ta", "te")
     private var currentLanguageIndex = 0
+    private var currentTabIndex = 0
 
     private val colorActive = Color.parseColor("#0066FF")
     private val colorInactive = Color.parseColor("#64748B")
@@ -42,10 +39,31 @@ class MainActivity : AppCompatActivity() {
     private var pushSubscriptionObserver: IPushSubscriptionObserver? = null
     private var hasShownOneSignalDialog = false
 
+    private val locationPermissionLauncher = registerForActivityResult(
+        ActivityResultContracts.RequestMultiplePermissions()
+    ) { permissions ->
+        val fineGranted = permissions[Manifest.permission.ACCESS_FINE_LOCATION] == true
+        val coarseGranted = permissions[Manifest.permission.ACCESS_COARSE_LOCATION] == true
+        if (fineGranted || coarseGranted) {
+            val currentFrag = supportFragmentManager.findFragmentById(R.id.fragment_container)
+            if (currentFrag is HomeFragment) {
+                currentFrag.detectLiveWardFromGps()
+            }
+        }
+    }
+
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(LocaleHelper.wrap(newBase))
+    }
+
+    override fun applyOverrideConfiguration(overrideConfiguration: Configuration?) {
+        LocaleHelper.applyConfiguration(overrideConfiguration, this)
+        super.applyOverrideConfiguration(overrideConfiguration)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val prefs = getSharedPreferences("reportit_lang_pref", Context.MODE_PRIVATE)
-        currentLanguageIndex = prefs.getInt("selected_lang_index", 0)
+        currentLanguageIndex = LocaleHelper.getSelectedLanguageIndex(this)
 
         enableEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -59,9 +77,10 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        // Set initial fragment to Home
+        // Set initial fragment based on intent or default to Home
+        val startTab = intent.getIntExtra("EXTRA_SELECTED_TAB", 0)
         if (savedInstanceState == null) {
-            selectTab(0)
+            selectTab(startTab)
         }
 
         // Preload GBA GIS Ward boundaries asynchronously
@@ -71,6 +90,16 @@ class MainActivity : AppCompatActivity() {
 
         // Setup OneSignal push verification observer
         setupOneSignalVerification()
+
+        // Request location permissions gracefully if not granted
+        if (!LocationHelper.hasLocationPermission(this)) {
+            locationPermissionLauncher.launch(
+                arrayOf(
+                    Manifest.permission.ACCESS_FINE_LOCATION,
+                    Manifest.permission.ACCESS_COARSE_LOCATION
+                )
+            )
+        }
     }
 
     private fun setupBottomNavigation() {
@@ -96,6 +125,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun selectTab(index: Int) {
+        currentTabIndex = index
+
         // Reset all tabs
         setTabState(binding.ivNavHome, binding.tvNavHome, false)
         setTabState(binding.ivNavReports, binding.tvNavReports, false)
@@ -132,7 +163,7 @@ class MainActivity : AppCompatActivity() {
     fun showLanguageDialog() {
         MaterialAlertDialogBuilder(this)
             .setTitle(getString(R.string.dialog_select_language))
-            .setSingleChoiceItems(languages, currentLanguageIndex) { dialog, which ->
+            .setSingleChoiceItems(LocaleHelper.SUPPORTED_LANG_NAMES, currentLanguageIndex) { dialog, which ->
                 switchAppLanguage(which)
                 dialog.dismiss()
             }
@@ -141,22 +172,25 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun switchAppLanguage(which: Int) {
-        if (which < 0 || which >= languageTags.size) return
+        if (which < 0 || which >= LocaleHelper.SUPPORTED_LANG_TAGS.size) return
         currentLanguageIndex = which
-        val langTag = languageTags[which]
+        val langTag = LocaleHelper.SUPPORTED_LANG_TAGS[which]
 
-        val prefs = getSharedPreferences("reportit_lang_pref", Context.MODE_PRIVATE)
-        prefs.edit().putInt("selected_lang_index", which).putString("selected_lang_tag", langTag).apply()
+        LocaleHelper.setLocale(this, langTag, which)
 
-        // Apply AndroidX runtime locale switching across entire application
-        val appLocale = LocaleListCompat.forLanguageTags(langTag)
-        AppCompatDelegate.setApplicationLocales(appLocale)
+        Toast.makeText(this, "Language: ${LocaleHelper.SUPPORTED_LANG_NAMES[which]}", Toast.LENGTH_SHORT).show()
 
-        Toast.makeText(this, "Language switched to ${languages[which]}", Toast.LENGTH_SHORT).show()
+        // Clean restart to recreate layouts and fragments with fresh localized resources
+        val intent = Intent(this, MainActivity::class.java).apply {
+            putExtra("EXTRA_SELECTED_TAB", currentTabIndex)
+            flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+        }
+        startActivity(intent)
+        finish()
     }
 
     fun updateLanguageButton(langCode: String) {
-        val index = languageTags.indexOfFirst { it.equals(langCode, ignoreCase = true) }
+        val index = LocaleHelper.SUPPORTED_LANG_TAGS.indexOfFirst { it.equals(langCode, ignoreCase = true) }
         if (index >= 0) {
             switchAppLanguage(index)
         }

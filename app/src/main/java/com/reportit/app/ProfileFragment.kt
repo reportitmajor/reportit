@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.reportit.app.data.session.SessionManager
 import com.reportit.app.databinding.FragmentProfileBinding
+import com.reportit.app.utils.LocaleHelper
 
 class ProfileFragment : Fragment() {
 
@@ -68,10 +69,9 @@ class ProfileFragment : Fragment() {
         }
 
         // Language Picker Dialog
-        val prefs = requireContext().getSharedPreferences("reportit_lang_pref", android.content.Context.MODE_PRIVATE)
-        val savedIndex = prefs.getInt("selected_lang_index", 0)
-        if (savedIndex in languages.indices) {
-            binding.tvCurrentLanguage.text = "${languages[savedIndex]} (Selected)"
+        val savedIndex = LocaleHelper.getSelectedLanguageIndex(requireContext())
+        if (savedIndex in LocaleHelper.SUPPORTED_LANG_NAMES.indices) {
+            binding.tvCurrentLanguage.text = "${LocaleHelper.SUPPORTED_LANG_NAMES[savedIndex]} (Selected)"
         }
 
         binding.cardLanguageSelect.setOnClickListener { (activity as? MainActivity)?.showLanguageDialog() }

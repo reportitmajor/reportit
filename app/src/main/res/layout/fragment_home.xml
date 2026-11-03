@@ -99,10 +99,11 @@
                             app:tint="@color/white" />
 
                         <TextView
+                            android:id="@+id/tvLanguageBadge"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="4dp"
-                            android:text="EN"
+                            android:text="@string/language_btn"
                             android:textColor="@color/white"
                             android:textSize="12sp"
                             android:textStyle="bold" />
@@ -175,7 +176,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
-                    android:text="Together for a cleaner, better Bengaluru"
+                    android:text="@string/home_tagline"
                     android:textColor="#E0F2FE"
                     android:textSize="13sp" />
 
@@ -260,7 +261,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Report a Civic Issue"
+                            android:text="@string/home_report_title"
                             android:textColor="@color/white"
                             android:textSize="19sp"
                             android:textStyle="bold" />
@@ -269,7 +270,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:text="Take a photo, tell us briefly and we'll route it to the right authority."
+                            android:text="@string/home_report_desc"
                             android:textColor="#E0F2FE"
                             android:textSize="11sp" />
 
@@ -307,7 +308,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="4dp"
                                     android:gravity="center"
-                                    android:text="AI Identifies\nthe issue"
+                                    android:text="@string/home_ai_identifies"
                                     android:textColor="#E0F2FE"
                                     android:textSize="9sp" />
                             </LinearLayout>
@@ -339,7 +340,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="4dp"
                                     android:gravity="center"
-                                    android:text="Auto-routes\nto authority"
+                                    android:text="@string/home_auto_routes"
                                     android:textColor="#E0F2FE"
                                     android:textSize="9sp" />
                             </LinearLayout>
@@ -371,7 +372,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="4dp"
                                     android:gravity="center"
-                                    android:text="Track till\nit's resolved"
+                                    android:text="@string/home_track_till"
                                     android:textColor="#E0F2FE"
                                     android:textSize="9sp" />
                             </LinearLayout>
@@ -419,7 +420,7 @@
                             android:layout_marginTop="12dp"
                             android:backgroundTint="@color/white"
                             android:paddingHorizontal="16dp"
-                            android:text="Report Now"
+                            android:text="@string/home_report_cta"
                             android:textColor="#0055D4"
                             android:textSize="12sp"
                             android:textStyle="bold"
@@ -493,7 +494,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="6dp"
-                                android:text="Live Updates"
+                                android:text="@string/home_live_updates"
                                 android:textColor="#64748B"
                                 android:textSize="12sp"
                                 android:textStyle="bold" />
@@ -532,7 +533,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="View All  ›"
+                            android:text="@string/home_view_all"
                             android:textColor="#EF4444"
                             android:textSize="11sp"
                             android:textStyle="bold" />
@@ -552,7 +553,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="My Reports"
+                    android:text="@string/home_my_reports"
                     android:textColor="#0F172A"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -561,7 +562,7 @@
                     android:id="@+id/tvViewAllReports"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="View All  ›"
+                    android:text="@string/home_view_all"
                     android:textColor="#0066FF"
                     android:textSize="13sp"
                     android:textStyle="bold" />
@@ -920,7 +921,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Civic Issues Around You"
+                    android:text="@string/home_issues_around"
                     android:textColor="#0F172A"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -1133,7 +1134,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
-                android:text="Explore More"
+                android:text="@string/home_explore_more"
                 android:textColor="#0F172A"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -1189,7 +1190,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="8dp"
                                 android:layout_weight="1"
-                                android:text="Civic Heatmap"
+                                android:text="@string/home_heatmap"
                                 android:textColor="#0F172A"
                                 android:textSize="12sp"
                                 android:textStyle="bold" />
@@ -1206,7 +1207,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="See problem hotspots"
+                                android:text="@string/home_see_hotspots"
                                 android:textColor="#64748B"
                                 android:textSize="10sp" />
 
@@ -1263,7 +1264,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="8dp"
                                 android:layout_weight="1"
-                                android:text="Emergency"
+                                android:text="@string/home_emergency"
                                 android:textColor="#0F172A"
                                 android:textSize="12sp"
                                 android:textStyle="bold" />
@@ -1280,7 +1281,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Urgent issues &amp; helplines"
+                                android:text="@string/home_urgent_help"
                                 android:textColor="#64748B"
                                 android:textSize="10sp" />
 
@@ -1345,7 +1346,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="8dp"
                                 android:layout_weight="1"
-                                android:text="My Civic Score"
+                                android:text="@string/home_civic_score"
                                 android:textColor="#0F172A"
                                 android:textSize="12sp"
                                 android:textStyle="bold" />
@@ -1362,7 +1363,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Your impact matters"
+                                android:text="@string/home_impact_matters"
                                 android:textColor="#64748B"
                                 android:textSize="10sp" />
 
@@ -1419,7 +1420,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="8dp"
                                 android:layout_weight="1"
-                                android:text="Know Depts"
+                                android:text="@string/home_know_depts"
                                 android:textColor="#0F172A"
                                 android:textSize="12sp"
                                 android:textStyle="bold" />
@@ -1436,7 +1437,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Roles &amp; services"
+                                android:text="@string/home_roles_services"
                                 android:textColor="#64748B"
                                 android:textSize="10sp" />
 
