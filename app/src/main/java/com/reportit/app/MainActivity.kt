@@ -1,5 +1,6 @@
 package com.reportit.app
 
+import android.content.Context
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.os.Bundle
@@ -8,6 +9,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.os.LocaleListCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
@@ -27,11 +30,9 @@ class MainActivity : AppCompatActivity() {
         "ಕನ್ನಡ (Kannada)",
         "हिन्दी (Hindi)",
         "தமிழ் (Tamil)",
-        "తెలుగు (Telugu)",
-        "മലയാളം (Malayalam)",
-        "मराठी (Marathi)",
-        "বাংলা (Bengali)"
+        "తెలుగు (Telugu)"
     )
+    private val languageTags = arrayOf("en", "kn", "hi", "ta", "te")
     private var currentLanguageIndex = 0
 
     private val colorActive = Color.parseColor("#0066FF")
@@ -43,6 +44,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val prefs = getSharedPreferences("reportit_lang_pref", Context.MODE_PRIVATE)
+        currentLanguageIndex = prefs.getInt("selected_lang_index", 0)
+
         enableEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -127,18 +131,35 @@ class MainActivity : AppCompatActivity() {
 
     fun showLanguageDialog() {
         MaterialAlertDialogBuilder(this)
-            .setTitle("🌐 Select Language (IndicTrans2)")
+            .setTitle(getString(R.string.dialog_select_language))
             .setSingleChoiceItems(languages, currentLanguageIndex) { dialog, which ->
-                currentLanguageIndex = which
-                Toast.makeText(this, "Language switched to ${languages[which]}", Toast.LENGTH_SHORT).show()
+                switchAppLanguage(which)
                 dialog.dismiss()
             }
-            .setNegativeButton("Cancel", null)
+            .setNegativeButton(getString(R.string.btn_cancel), null)
             .show()
     }
 
+    fun switchAppLanguage(which: Int) {
+        if (which < 0 || which >= languageTags.size) return
+        currentLanguageIndex = which
+        val langTag = languageTags[which]
+
+        val prefs = getSharedPreferences("reportit_lang_pref", Context.MODE_PRIVATE)
+        prefs.edit().putInt("selected_lang_index", which).putString("selected_lang_tag", langTag).apply()
+
+        // Apply AndroidX runtime locale switching across entire application
+        val appLocale = LocaleListCompat.forLanguageTags(langTag)
+        AppCompatDelegate.setApplicationLocales(appLocale)
+
+        Toast.makeText(this, "Language switched to ${languages[which]}", Toast.LENGTH_SHORT).show()
+    }
+
     fun updateLanguageButton(langCode: String) {
-        // Language updated hook
+        val index = languageTags.indexOfFirst { it.equals(langCode, ignoreCase = true) }
+        if (index >= 0) {
+            switchAppLanguage(index)
+        }
     }
 
     fun showNotificationsDialog() {

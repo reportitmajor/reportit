@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">हमारा रिपोर्ट-इट</string>
+    <string name="tagline">रिपोर्ट करें। समाधान पाएं। बेंगलुरु बदलें।</string>
+    
+    <!-- Navigation -->
+    <string name="nav_home">होम</string>
+    <string name="nav_reports">मेरी शिकायतें</string>
+    <string name="nav_report_issue">रिपोर्ट दर्ज करें</string>
+    <string name="nav_map">नागरिक हीटमैप</string>
+    <string name="nav_track">स्थिति देखें</string>
+    <string name="nav_profile">प्रोफाइल</string>
+    <string name="nav_admin">बीबीएमपी एडमिन</string>
+    
+    <!-- General & Location -->
+    <string name="location_placeholder">बेंगलुरु, कर्नाटक</string>
+    <string name="default_ward">वार्ड चुनें या लाइव जीपीएस उपयोग करें</string>
+    <string name="language_btn">भाषा</string>
+    <string name="report_cta">नागरिक समस्या रिपोर्ट करें</string>
+    <string name="recent_reports">आपके आस-पास की हालिया शिकायतें</string>
+    <string name="civic_impact">नागरिक समाधान प्रभाव</string>
+    <string name="citizen_score_title">हमारा नागरिक स्कोर</string>
+    <string name="citizen_score_value">95 / 100 • नागरिक चैंपियन</string>
+    
+    <!-- Categories -->
+    <string name="cat_pothole">सड़कें और गड्ढे</string>
+    <string name="cat_pothole_sub">बीबीएमपी रोड इन्फ्रा</string>
+    <string name="cat_garbage">कचरा और कचरा प्रबंधन</string>
+    <string name="cat_garbage_sub">बीबीएमपी ठोस अपशिष्ट</string>
+    <string name="cat_water">पानी का रिसाव और सीवेज</string>
+    <string name="cat_water_sub">बीडब्ल्यूएसएसबी 1916</string>
+    <string name="cat_power">बिजली के तार और खतरे</string>
+    <string name="cat_power_sub">बेस्कॉम 1912</string>
+    <string name="cat_streetlight">स्ट्रीट लाइट और अंधेरे क्षेत्र</string>
+    <string name="cat_streetlight_sub">बीबीएमपी विद्युत विभाग</string>
+    <string name="cat_tree">पेड़ गिरना और यातायात बाधा</string>
+    <string name="cat_tree_sub">बीबीएमपी वन / बीटीपी</string>
+
+    <!-- Additional UI & Action Strings -->
+    <string name="btn_take_photo">फोटो खींचें</string>
+    <string name="btn_upload_gallery">गैलरी से अपलोड करें</string>
+    <string name="btn_continue">आगे बढ़ें</string>
+    <string name="btn_cancel">रद्द करें</string>
+    <string name="btn_submit_report">शिकायत सबमिट करें</string>
+    <string name="btn_adjust_location">वार्ड बदलें</string>
+    <string name="status_submitted">दर्ज की गई</string>
+    <string name="status_in_progress">प्रक्रिया में</string>
+    <string name="status_resolved">समाधान हो गया</string>
+    <string name="status_critical">त्वरित कार्रवाई</string>
+    <string name="dialog_select_language">🌐 क्षेत्रीय भाषा चुनें</string>
+    <string name="gps_locking">🛰️ लाइव जीपीएस सिग्नल खोजा जा रहा है...</string>
+    <string name="gps_locked">📍 लाइव जीपीएस वार्ड लॉक किया गया</string>
+    <string name="gps_failed">⚠️ जीपीएस सिग्नल नहीं मिला। कृपया लोकेशन ऑन करें।</string>
+</resources>
+

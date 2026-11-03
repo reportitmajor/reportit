@@ -23,10 +23,7 @@ class ProfileFragment : Fragment() {
         "ಕನ್ನಡ (Kannada)",
         "हिन्दी (Hindi)",
         "தமிழ் (Tamil)",
-        "తెలుగు (Telugu)",
-        "മലയാളം (Malayalam)",
-        "मराठी (Marathi)",
-        "বাংলা (Bengali)"
+        "తెలుగు (Telugu)"
     )
     private var selectedLanguageIndex = 0
 
@@ -70,23 +67,15 @@ class ProfileFragment : Fragment() {
             }
         }
 
-        // Language Picker Dialog (IndicTrans2 integration)
-        val showLanguageDialog = {
-            MaterialAlertDialogBuilder(requireContext())
-                .setTitle("🌐 Select Regional Language (IndicTrans2)")
-                .setSingleChoiceItems(languages, selectedLanguageIndex) { dialog, which ->
-                    selectedLanguageIndex = which
-                    binding.tvCurrentLanguage.text = "${languages[which]} (Selected)"
-                    (activity as? MainActivity)?.updateLanguageButton(languages[which].split(" ")[0])
-                    Toast.makeText(requireContext(), "Language changed to ${languages[which]}", Toast.LENGTH_SHORT).show()
-                    dialog.dismiss()
-                }
-                .setNegativeButton("Cancel", null)
-                .show()
+        // Language Picker Dialog
+        val prefs = requireContext().getSharedPreferences("reportit_lang_pref", android.content.Context.MODE_PRIVATE)
+        val savedIndex = prefs.getInt("selected_lang_index", 0)
+        if (savedIndex in languages.indices) {
+            binding.tvCurrentLanguage.text = "${languages[savedIndex]} (Selected)"
         }
 
-        binding.cardLanguageSelect.setOnClickListener { showLanguageDialog() }
-        binding.btnChangeLanguage.setOnClickListener { showLanguageDialog() }
+        binding.cardLanguageSelect.setOnClickListener { (activity as? MainActivity)?.showLanguageDialog() }
+        binding.btnChangeLanguage.setOnClickListener { (activity as? MainActivity)?.showLanguageDialog() }
 
         // Switch to Admin / Authority Command Center
         binding.cardSwitchAdmin.setOnClickListener {

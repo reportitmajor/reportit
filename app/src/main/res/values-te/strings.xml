@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">మన రిపోర్ట్-ఇట్</string>
+    <string name="tagline">ఫిర్యాదు చేయండి. పరిష్కరించండి. బెంగళూరును మార్చండి.</string>
+    
+    <!-- Navigation -->
+    <string name="nav_home">హోమ్</string>
+    <string name="nav_reports">నా ఫిర్యాదులు</string>
+    <string name="nav_report_issue">ఫిర్యాదు నమోదు</string>
+    <string name="nav_map">పౌర మ్యాప్</string>
+    <string name="nav_track">పురోగతి ట్రాకింగ్</string>
+    <string name="nav_profile">ప్రొఫైల్</string>
+    <string name="nav_admin">బీబీఎంపీ అడ్మిన్</string>
+    
+    <!-- General & Location -->
+    <string name="location_placeholder">బెంగళూరు, కర్ణాటక</string>
+    <string name="default_ward">వార్డును ఎంచుకోండి లేదా లైవ్ జీపీఎస్ ఉపయోగించండి</string>
+    <string name="language_btn">భాష</string>
+    <string name="report_cta">సమస్యను నివేదించండి</string>
+    <string name="recent_reports">మీ సమీపంలోని తాజా ఫిర్యాదులు</string>
+    <string name="civic_impact">పౌర పరిష్కార ప్రభావం</string>
+    <string name="citizen_score_title">మన పౌర స్కోరు</string>
+    <string name="citizen_score_value">95 / 100 • పౌర ఛాంపియన్</string>
+    
+    <!-- Categories -->
+    <string name="cat_pothole">రోడ్లు &amp; గుంతలు</string>
+    <string name="cat_pothole_sub">బీబీఎంపీ రోడ్ ఇన్ఫ్రా</string>
+    <string name="cat_garbage">చెత్త &amp; వ్యర్థాల నిర్వహణ</string>
+    <string name="cat_garbage_sub">బీబీఎంపీ ఘన వ్యర్థాలు</string>
+    <string name="cat_water">నీటి లీకేజీ &amp; మురుగునీరు</string>
+    <string name="cat_water_sub">బీడబ్ల్యూఎస్ఎస్బీ 1916</string>
+    <string name="cat_power">విద్యుత్ తీగలు &amp; ప్రమాదాలు</string>
+    <string name="cat_power_sub">బెస్కామ్ 1912</string>
+    <string name="cat_streetlight">వీధి దీపాలు &amp; చీకటి ప్రాంతాలు</string>
+    <string name="cat_streetlight_sub">బీబీఎంపీ విద్యుత్ విభాగం</string>
+    <string name="cat_tree">చెట్లు కూలడం &amp; ట్రాఫిక్ సమస్య</string>
+    <string name="cat_tree_sub">బీబీఎంపీ అటవీ / బీటీపీ</string>
+
+    <!-- Additional UI & Action Strings -->
+    <string name="btn_take_photo">ఫోటో తీయండి</string>
+    <string name="btn_upload_gallery">గ్యాలరీ నుండి ఎంచుకోండి</string>
+    <string name="btn_continue">కొనసాగించండి</string>
+    <string name="btn_cancel">రద్దు చేయండి</string>
+    <string name="btn_submit_report">ఫిర్యాదు సమర్పించండి</string>
+    <string name="btn_adjust_location">వార్డును మార్చండి</string>
+    <string name="status_submitted">సమర్పించబడింది</string>
+    <string name="status_in_progress">పురోగతిలో ఉంది</string>
+    <string name="status_resolved">పరిష్కరించబడింది</string>
+    <string name="status_critical">అత్యవసర చర్య</string>
+    <string name="dialog_select_language">🌐 ప్రాంతీయ భాషను ఎంచుకోండి</string>
+    <string name="gps_locking">🛰️ లైవ్ జీపీఎస్ సిగ్నల్ శోధించబడుతోంది...</string>
+    <string name="gps_locked">📍 లైవ్ జీపీఎస్ వార్డు లాక్ చేయబడింది</string>
+    <string name="gps_failed">⚠️ జీపీఎస్ సిగ్నల్ లభించలేదు. దయచేసి లొకేషన్ ఆన్ చేయండి.</string>
+</resources>
+

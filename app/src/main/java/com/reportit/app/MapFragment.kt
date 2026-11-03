@@ -59,10 +59,12 @@ class MapFragment : Fragment() {
 
     private fun startLiveReportsSync() {
         // 1. Fetch current GPS location and update user location beacon
-        com.reportit.app.utils.LocationHelper.fetchCurrentLocation(requireContext()) { lat, lon, _ ->
+        com.reportit.app.utils.LocationHelper.fetchCurrentLocation(requireContext()) { lat, lon, _, isRealGps ->
             activity?.runOnUiThread {
                 if (_binding == null) return@runOnUiThread
-                binding.interactiveMapView.setUserLocation(lat, lon, centerOnIt = false)
+                if (isRealGps) {
+                    binding.interactiveMapView.setUserLocation(lat, lon, centerOnIt = false)
+                }
             }
         }
 
@@ -453,17 +455,20 @@ class MapFragment : Fragment() {
     }
 
     private fun recenterMapLocation() {
-        com.reportit.app.utils.LocationHelper.fetchCurrentLocation(requireContext()) { lat, lon, _ ->
+        Toast.makeText(requireContext(), "🛰️ Locking high-accuracy GPS...", Toast.LENGTH_SHORT).show()
+        com.reportit.app.utils.LocationHelper.fetchCurrentLocation(requireContext()) { lat, lon, _, isRealGps ->
             activity?.runOnUiThread {
                 if (_binding == null) return@runOnUiThread
-                binding.interactiveMapView.setUserLocation(lat, lon, centerOnIt = true)
-                val ward = com.reportit.app.gis.GbaSpatialManager.resolvePoint(requireContext(), lat, lon)
-                if (ward != null) {
-                    binding.tvMapLocationTitle.text = "Near me • ${ward.wardName}"
-                    binding.tvMapWardSubtitle.text = "Ward ${ward.wardNumber} • ${ward.acName}"
-                    Toast.makeText(requireContext(), "📍 Live GPS: Ward ${ward.wardNumber} • ${ward.wardName}", Toast.LENGTH_SHORT).show()
+                if (isRealGps) {
+                    binding.interactiveMapView.setUserLocation(lat, lon, centerOnIt = true)
+                    val ward = com.reportit.app.gis.GbaSpatialManager.resolvePoint(requireContext(), lat, lon)
+                    if (ward != null) {
+                        binding.tvMapLocationTitle.text = "Near me • ${ward.wardName}"
+                        binding.tvMapWardSubtitle.text = "Ward ${ward.wardNumber} • ${ward.acName}"
+                        Toast.makeText(requireContext(), "📍 Live GPS: Ward ${ward.wardNumber} • ${ward.wardName}", Toast.LENGTH_SHORT).show()
+                    }
                 } else {
-                    Toast.makeText(requireContext(), "📍 Live GPS: Lat $lat, Lon $lon", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "⚠️ Unable to acquire live GPS fix. Please ensure Device Location is enabled.", Toast.LENGTH_LONG).show()
                 }
             }
         }

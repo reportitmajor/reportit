@@ -300,35 +300,47 @@ class ReportIssueFragment : Fragment() {
             return
         }
 
-        LocationHelper.fetchCurrentLocation(requireContext()) { lat, lon, isAccurate ->
+        binding.tvLocationName.text = "🛰️ Acquiring live GPS lock..."
+        binding.tvLocationWard.text = "Detecting your Greater Bengaluru ward via satellite..."
+
+        LocationHelper.fetchCurrentLocation(requireContext()) { lat, lon, address, isRealGps ->
             activity?.runOnUiThread {
                 if (_binding != null) {
-                    currentLatitude = lat
-                    currentLongitude = lon
+                    if (isRealGps && lat != 0.0 && lon != 0.0) {
+                        currentLatitude = lat
+                        currentLongitude = lon
 
-                    val gbaWard = GbaSpatialManager.resolvePoint(requireContext(), lat, lon)
-                    if (gbaWard != null) {
-                        detectedGbaWardNumber = gbaWard.wardNumber
-                        detectedGbaWardName = gbaWard.wardName
-                        detectedGbaZone = gbaWard.gbaZone
-                        detectedMlaName = gbaWard.mlaName
-                        detectedAcName = gbaWard.acName
-                        detectedAeeName = gbaWard.aeeName
-                        detectedAeeContact = gbaWard.aeeContact
+                        val gbaWard = GbaSpatialManager.resolvePoint(requireContext(), lat, lon)
+                        if (gbaWard != null) {
+                            detectedGbaWardNumber = gbaWard.wardNumber
+                            detectedGbaWardName = gbaWard.wardName
+                            detectedGbaZone = gbaWard.gbaZone
+                            detectedMlaName = gbaWard.mlaName
+                            detectedAcName = gbaWard.acName
+                            detectedAeeName = gbaWard.aeeName
+                            detectedAeeContact = gbaWard.aeeContact
 
-                        selectedWard = "Ward ${gbaWard.wardNumber} — ${gbaWard.wardName} (${gbaWard.acName})"
-                        selectedLocation = "${gbaWard.wardName}, ${gbaWard.gbaZone}"
+                            selectedWard = "Ward ${gbaWard.wardNumber} — ${gbaWard.wardName} (${gbaWard.acName})"
+                            val locText = address ?: "${gbaWard.wardName}, ${gbaWard.gbaZone}"
+                            selectedLocation = locText
 
-                        binding.tvLocationName.text = "${gbaWard.wardName}, ${gbaWard.gbaZone}"
-                        binding.tvLocationWard.text = "🏛️ Ward ${gbaWard.wardNumber}: ${gbaWard.wardName}\n🗳️ MLA: ${gbaWard.mlaName} (${gbaWard.acName})\n🏢 Zone: ${gbaWard.gbaZone}"
+                            binding.tvLocationName.text = locText
+                            binding.tvLocationWard.text = "🏛️ Ward ${gbaWard.wardNumber}: ${gbaWard.wardName}\n🗳️ MLA: ${gbaWard.mlaName} (${gbaWard.acName})\n🏢 Zone: ${gbaWard.gbaZone}"
 
-                        if (isAccurate) {
                             Toast.makeText(
                                 requireContext(),
                                 "📍 Live GPS: Ward ${gbaWard.wardNumber} • ${gbaWard.wardName}",
                                 Toast.LENGTH_SHORT
                             ).show()
                         }
+                    } else {
+                        binding.tvLocationName.text = "⚠️ GPS Signal Weak / Off"
+                        binding.tvLocationWard.text = "Please tap 'Adjust / Select Ward' to choose your ward or turn on device GPS."
+                        Toast.makeText(
+                            requireContext(),
+                            "⚠️ GPS signal not locked. Please ensure Location is enabled in Settings.",
+                            Toast.LENGTH_LONG
+                        ).show()
                     }
                 }
                 onComplete?.invoke()

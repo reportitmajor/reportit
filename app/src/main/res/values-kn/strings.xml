@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ನಮ್ಮ ರಿಪೋರ್ಟ್-ಇಟ್</string>
+    <string name="tagline">ವರದಿ ಮಾಡಿ. ಪರಿಹರಿಸಿ. ಬೆಂಗಳೂರನ್ನು ಬದಲಾಯಿಸಿ.</string>
+    
+    <!-- Navigation -->
+    <string name="nav_home">ಮುಖಪುಟ</string>
+    <string name="nav_reports">ನನ್ನ ವರದಿಗಳು</string>
+    <string name="nav_report_issue">ದೂರು ನೀಡಿ</string>
+    <string name="nav_map">ನಾಗರಿಕ ನಕ್ಷೆ</string>
+    <string name="nav_track">ಪ್ರಗತಿ ಪರಿಶೀಲನೆ</string>
+    <string name="nav_profile">ಪ್ರೊಫೈಲ್</string>
+    <string name="nav_admin">ಬಿಬಿಎಂಪಿ ಅಡ್ಮಿನ್</string>
+    
+    <!-- General & Location -->
+    <string name="location_placeholder">ಬೆಂಗಳೂರು, ಕರ್ನಾಟಕ</string>
+    <string name="default_ward">ವಾರ್ಡ್ ಆಯ್ಕೆಮಾಡಿ ಅಥವಾ ಜಿಪಿಎಸ್ ಬಳಸಿ</string>
+    <string name="language_btn">ಭಾಷೆ</string>
+    <string name="report_cta">ನಾಗರಿಕ ಸಮಸ್ಯೆ ವರದಿ ಮಾಡಿ</string>
+    <string name="recent_reports">ನಿಮ್ಮ ಸಮೀಪದ ಇತ್ತೀಚಿನ ವರದಿಗಳು</string>
+    <string name="civic_impact">ನಾಗರಿಕ ಪರಿಹಾರ ಪ್ರಗತಿ</string>
+    <string name="citizen_score_title">ನಮ್ಮ ನಾಗರಿಕ ಸ್ಕೋರ್</string>
+    <string name="citizen_score_value">95 / 100 • ನಾಗರಿಕ ಚಾಂಪಿಯನ್</string>
+    
+    <!-- Categories -->
+    <string name="cat_pothole">ರಸ್ತೆಗಳು ಮತ್ತು ಗುಂಡಿಗಳು</string>
+    <string name="cat_pothole_sub">ಬಿಬಿಎಂಪಿ ರಸ್ತೆ ಮೂಲಸೌಕರ್ಯ</string>
+    <string name="cat_garbage">ಕಸ ಮತ್ತು ತ್ಯಾಜ್ಯ ವಿಲೇವಾರಿ</string>
+    <string name="cat_garbage_sub">ಬಿಬಿಎಂಪಿ ಘನತ್ಯಾಜ್ಯ ನಿರ್ವಹಣೆ</string>
+    <string name="cat_water">ನೀರಿನ ಸೋರಿಕೆ ಮತ್ತು ಒಳಚರಂಡಿ</string>
+    <string name="cat_water_sub">ಬಿಡಬ್ಲ್ಯೂಎಸ್‌ಎಸ್‌ಬಿ 1916</string>
+    <string name="cat_power">ಅಪಾಯಕಾರಿ ವಿದ್ಯುತ್ ತಂತಿಗಳು</string>
+    <string name="cat_power_sub">ಬೆಸ್ಕಾಂ 1912</string>
+    <string name="cat_streetlight">ಬೀದಿ ದೀಪಗಳು ಮತ್ತು ಕತ್ತಲೆ ಪ್ರದೇಶ</string>
+    <string name="cat_streetlight_sub">ಬಿಬಿಎಂಪಿ ವಿದ್ಯುತ್ ವಿಭಾಗ</string>
+    <string name="cat_tree">ಮರ ಬಿದ್ದಿರುವುದು ಮತ್ತು ಸಂಚಾರ ಅಡಚಣೆ</string>
+    <string name="cat_tree_sub">ಬಿಬಿಎಂಪಿ ಅರಣ್ಯ / ಬಿಟಿಪಿ</string>
+
+    <!-- Additional UI & Action Strings -->
+    <string name="btn_take_photo">ಫೋಟೋ ತೆಗೆಯಿರಿ</string>
+    <string name="btn_upload_gallery">ಗ್ಯಾಲರಿಯಿಂದ ಅಪ್‌ಲೋಡ್ ಮಾಡಿ</string>
+    <string name="btn_continue">ಮುಂದುವರಿಸಿ</string>
+    <string name="btn_cancel">ರದ್ದುಮಾಡಿ</string>
+    <string name="btn_submit_report">ದೂರು ಸಲ್ಲಿಸಿ</string>
+    <string name="btn_adjust_location">ವಾರ್ಡ್ ಬದಲಾಯಿಸಿ</string>
+    <string name="status_submitted">ಸಲ್ಲಿಸಲಾಗಿದೆ</string>
+    <string name="status_in_progress">ಪ್ರಗತಿಯಲ್ಲಿದೆ</string>
+    <string name="status_resolved">ಪರಿಹರಿಸಲಾಗಿದೆ</string>
+    <string name="status_critical">ತುರ್ತು ಕ್ರಮ</string>
+    <string name="dialog_select_language">🌐 ಪ್ರಾದೇಶಿಕ ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>
+    <string name="gps_locking">🛰️ ನಿಖರವಾದ ಜಿಪಿಎಸ್ ಸಂಪರ್ಕಿಸಲಾಗುತ್ತಿದೆ...</string>
+    <string name="gps_locked">📍 ಲೈವ್ ಜಿಪಿಎಸ್ ವಾರ್ಡ್ ಪತ್ತೆಯಾಗಿದೆ</string>
+    <string name="gps_failed">⚠️ ಜಿಪಿಎಸ್ ಸಿಗ್ನಲ್ ಲಭ್ಯವಿಲ್ಲ. ದಯವಿಟ್ಟು ಲೊಕೇಶನ್ ಆನ್ ಮಾಡಿ.</string>
+</resources>
+

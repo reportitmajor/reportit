@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">நம்ம ரிப்போர்ட்-இட்</string>
+    <string name="tagline">புகாரளியுங்கள். தீர்வு காணுங்கள். பெங்களூரை மாற்றுங்கள்.</string>
+    
+    <!-- Navigation -->
+    <string name="nav_home">முகப்பு</string>
+    <string name="nav_reports">என் புகார்கள்</string>
+    <string name="nav_report_issue">புகார் அளி</string>
+    <string name="nav_map">மக்கள் வரைபடம்</string>
+    <string name="nav_track">நிலை கண்காணிப்பு</string>
+    <string name="nav_profile">சுயவிவரம்</string>
+    <string name="nav_admin">பிபிஎம்பி நிர்வாகம்</string>
+    
+    <!-- General & Location -->
+    <string name="location_placeholder">பெங்களூரு, கர்நாடகா</string>
+    <string name="default_ward">வார்டைத் தேர்ந்தெடுக்கவும் அல்லது ஜிபிஎஸ் பயன்படுத்தவும்</string>
+    <string name="language_btn">மொழி</string>
+    <string name="report_cta">புகார் பதிவு செய்க</string>
+    <string name="recent_reports">அருகிலுள்ள சமீபத்திய புகார்கள்</string>
+    <string name="civic_impact">மக்கள் தீர்வு தாக்கம்</string>
+    <string name="citizen_score_title">நம்ம குடிமக்கள் மதிப்பெண்</string>
+    <string name="citizen_score_value">95 / 100 • மக்கள் சாம்பியன்</string>
+    
+    <!-- Categories -->
+    <string name="cat_pothole">சாலைகள் &amp; குழிகள்</string>
+    <string name="cat_pothole_sub">பிபிஎம்பி சாலை உள்கட்டமைப்பு</string>
+    <string name="cat_garbage">குப்பை &amp; கழிவு மேலாண்மை</string>
+    <string name="cat_garbage_sub">பிபிஎம்பி திடக்கழிவு</string>
+    <string name="cat_water">குடிநீர் கசிவு &amp; கழிவுநீர்</string>
+    <string name="cat_water_sub">பிடபிள்யூஎஸ்எஸ்பி 1916</string>
+    <string name="cat_power">மின்சார கம்பிகள் &amp; ஆபத்து</string>
+    <string name="cat_power_sub">பெஸ்காம் 1912</string>
+    <string name="cat_streetlight">தெருவிளக்குகள் &amp; இருண்ட பகுதிகள்</string>
+    <string name="cat_streetlight_sub">பிபிஎம்பி மின் துறை</string>
+    <string name="cat_tree">மரம் விழுதல் &amp; போக்குவரத்து தடை</string>
+    <string name="cat_tree_sub">பிபிஎம்பி வனம் / பிடிபி</string>
+
+    <!-- Additional UI & Action Strings -->
+    <string name="btn_take_photo">புகைப்படம் எடு</string>
+    <string name="btn_upload_gallery">கேலரியிலிருந்து பதிவேற்று</string>
+    <string name="btn_continue">தொடரவும்</string>
+    <string name="btn_cancel">ரத்து செய்</string>
+    <string name="btn_submit_report">புகாரைச் சமர்ப்பிக்கவும்</string>
+    <string name="btn_adjust_location">வார்டை மாற்றவும்</string>
+    <string name="status_submitted">சமர்ப்பிக்கப்பட்டது</string>
+    <string name="status_in_progress">செயல்பாட்டில் உள்ளது</string>
+    <string name="status_resolved">தீர்க்கப்பட்டது</string>
+    <string name="status_critical">அவசர நடவடிக்கை</string>
+    <string name="dialog_select_language">🌐 வட்டார மொழியைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="gps_locking">🛰️ நேரடி ஜிபிஎஸ் இணைக்கப்படுகிறது...</string>
+    <string name="gps_locked">📍 நேரடி ஜிபிஎஸ் வார்டு கண்டறியப்பட்டது</string>
+    <string name="gps_failed">⚠️ ஜிபிஎஸ் சிக்னல் இல்லை. இருப்பிடத்தை இயக்கவும்.</string>
+</resources>
+

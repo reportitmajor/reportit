@@ -13,7 +13,7 @@
     
     <!-- General & Location -->
     <string name="location_placeholder">Bengaluru, Karnataka</string>
-    <string name="default_ward">Ward 150 - Bellandur, Mahadevapura</string>
+    <string name="default_ward">Select Ward or Use Live GPS</string>
     <string name="language_btn">Language</string>
     <string name="report_cta">Report Civic Issue</string>
     <string name="recent_reports">Recent Reports Near You</string>
@@ -34,4 +34,20 @@
     <string name="cat_streetlight_sub">BBMP Electrical</string>
     <string name="cat_tree">Tree Fall &amp; Traffic Hazard</string>
     <string name="cat_tree_sub">BBMP Forest / BTP</string>
+
+    <!-- Additional UI & Action Strings -->
+    <string name="btn_take_photo">Capture Live Photo</string>
+    <string name="btn_upload_gallery">Upload from Gallery</string>
+    <string name="btn_continue">Continue</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_submit_report">Submit Civic Report</string>
+    <string name="btn_adjust_location">Adjust / Select Ward</string>
+    <string name="status_submitted">Submitted</string>
+    <string name="status_in_progress">In Progress</string>
+    <string name="status_resolved">Resolved</string>
+    <string name="status_critical">Critical Action</string>
+    <string name="dialog_select_language">🌐 Select Regional Language</string>
+    <string name="gps_locking">🛰️ Locking high-accuracy GPS...</string>
+    <string name="gps_locked">📍 Live GPS Ward Locked</string>
+    <string name="gps_failed">⚠️ GPS signal weak. Please enable device location.</string>
 </resources>

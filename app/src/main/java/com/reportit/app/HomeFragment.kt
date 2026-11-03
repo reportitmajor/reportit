@@ -8,6 +8,8 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.reportit.app.databinding.FragmentHomeBinding
+import com.reportit.app.gis.GbaSpatialManager
+import com.reportit.app.utils.LocationHelper
 
 class HomeFragment : Fragment() {
 
@@ -114,6 +116,24 @@ class HomeFragment : Fragment() {
 
         binding.cardExploreDepts.setOnClickListener {
             showDepartmentsDirectoryDialog()
+        }
+
+        // Auto-detect user's real ward via live GPS
+        detectLiveWardFromGps()
+    }
+
+    private fun detectLiveWardFromGps() {
+        if (!LocationHelper.hasLocationPermission(requireContext())) return
+
+        LocationHelper.fetchCurrentLocation(requireContext()) { lat, lon, _, isRealGps ->
+            activity?.runOnUiThread {
+                if (_binding != null && isRealGps && lat != 0.0 && lon != 0.0) {
+                    val gbaWard = GbaSpatialManager.resolvePoint(requireContext(), lat, lon)
+                    if (gbaWard != null) {
+                        binding.tvCurrentWard.text = "🏛️ Ward ${gbaWard.wardNumber} — ${gbaWard.wardName} (${gbaWard.acName})"
+                    }
+                }
+            }
         }
     }
 
