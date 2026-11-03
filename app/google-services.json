@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "136096395261",
+    "firebase_url": "https://reportit-43ba2-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "reportit-43ba2",
+    "storage_bucket": "reportit-43ba2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:136096395261:android:2bbf89c197e019d7c07394",
+        "android_client_info": {
+          "package_name": "com.reportit.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "136096395261-hehhqgof3nl8a7oi23erbilovcn0r972.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.reportit.app",
+            "certificate_hash": "cd998c9a562a2614aa7a884689eb8c13a8fb08fb"
+          }
+        },
+        {
+          "client_id": "136096395261-516lf311il6jf29cuhk5aojcphb6i1l6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgKk5an178TnqFWnC9y7piqYPbUTSUmMM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "136096395261-516lf311il6jf29cuhk5aojcphb6i1l6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

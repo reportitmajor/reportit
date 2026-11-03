@@ -1,0 +1,335 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "constituency_code": "AC-154",
+    "constituency_name": "Rajarajeshwari Nagar (RR Nagar)",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "total_wards": 9,
+    "authority": "Greater Bengaluru Authority (GBA) / BBMP"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "ward_number": 160,
+        "ward_name": "Rajarajeshwari Nagar",
+        "ac_number": 154,
+        "ac_name": "Rajarajeshwari Nagar",
+        "mla_name": "Munirathna",
+        "gba_zone": "South City Corporation",
+        "aee_name": "Er. R. Suresh (AEE)",
+        "aee_contact": "+91 80 2860 4122",
+        "health_inspector": "Dr. K. Manjunath (+91 98860 32114)",
+        "office_address": "BBMP Ward Office, 5th Main, Ideal Homes Twp, RR Nagar",
+        "total_complaints": 34,
+        "critical_count": 4,
+        "in_progress_count": 18,
+        "resolved_count": 12,
+        "resolution_rate": 78.4,
+        "top_issue": "Water Leakage & Potholes",
+        "color": "#4338CA"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [77.5180, 12.9350],
+            [77.5320, 12.9380],
+            [77.5380, 12.9240],
+            [77.5340, 12.9150],
+            [77.5210, 12.9140],
+            [77.5140, 12.9230],
+            [77.5180, 12.9350]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ward_number": 159,
+        "ward_name": "Kenchenahalli",
+        "ac_number": 154,
+        "ac_name": "Rajarajeshwari Nagar",
+        "mla_name": "Munirathna",
+        "gba_zone": "South City Corporation",
+        "aee_name": "Er. P. Venkatesh (AEE)",
+        "aee_contact": "+91 80 2860 5510",
+        "health_inspector": "Smt. Shailaja M. (+91 98860 88231)",
+        "office_address": "BBMP Ward Office, Mysore Road, Kenchenahalli",
+        "total_complaints": 22,
+        "critical_count": 2,
+        "in_progress_count": 11,
+        "resolved_count": 9,
+        "resolution_rate": 81.8,
+        "top_issue": "Solid Waste & Drainage",
+        "color": "#3B82F6"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [77.5140, 12.9230],
+            [77.5210, 12.9140],
+            [77.5340, 12.9150],
+            [77.5300, 12.9020],
+            [77.5150, 12.8990],
+            [77.5050, 12.9090],
+            [77.5140, 12.9230]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ward_number": 129,
+        "ward_name": "Jnanabharathi",
+        "ac_number": 154,
+        "ac_name": "Rajarajeshwari Nagar",
+        "mla_name": "Munirathna",
+        "gba_zone": "South City Corporation",
+        "aee_name": "Er. H. Nagaraj (AEE)",
+        "aee_contact": "+91 80 2321 8840",
+        "health_inspector": "Sri. Ramesh Babu (+91 98860 11982)",
+        "office_address": "BBMP Office, Bangalore University Campus, Jnanabharathi",
+        "total_complaints": 29,
+        "critical_count": 3,
+        "in_progress_count": 15,
+        "resolved_count": 11,
+        "resolution_rate": 75.8,
+        "top_issue": "Streetlights & Road Safety",
+        "color": "#06B6D4"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [77.4980, 12.9550],
+            [77.5180, 12.9580],
+            [77.5220, 12.9420],
+            [77.5180, 12.9350],
+            [77.5050, 12.9320],
+            [77.4950, 12.9420],
+            [77.4980, 12.9550]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ward_number": 73,
+        "ward_name": "Kottigepalya",
+        "ac_number": 154,
+        "ac_name": "Rajarajeshwari Nagar",
+        "mla_name": "Munirathna",
+        "gba_zone": "West City Corporation",
+        "aee_name": "Er. M. Shivakumar (AEE)",
+        "aee_contact": "+91 80 2318 4200",
+        "health_inspector": "Sri. Chethan Kumar (+91 98860 44521)",
+        "office_address": "BBMP Office, Outer Ring Road, Kottigepalya",
+        "total_complaints": 19,
+        "critical_count": 1,
+        "in_progress_count": 10,
+        "resolved_count": 8,
+        "resolution_rate": 84.2,
+        "top_issue": "Potholes & Footpaths",
+        "color": "#8B5CF6"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [77.5050, 12.9850],
+            [77.5220, 12.9880],
+            [77.5260, 12.9720],
+            [77.5180, 12.9580],
+            [77.4980, 12.9550],
+            [77.4950, 12.9720],
+            [77.5050, 12.9850]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ward_number": 72,
+        "ward_name": "Herohalli",
+        "ac_number": 154,
+        "ac_name": "Rajarajeshwari Nagar",
+        "mla_name": "Munirathna",
+        "gba_zone": "West City Corporation",
+        "aee_name": "Er. D. Basavaraju (AEE)",
+        "aee_contact": "+91 80 2348 7710",
+        "health_inspector": "Smt. Roopa K. (+91 98860 67119)",
+        "office_address": "BBMP Ward Office, Magadi Main Road, Herohalli",
+        "total_complaints": 27,
+        "critical_count": 5,
+        "in_progress_count": 13,
+        "resolved_count": 9,
+        "resolution_rate": 70.3,
+        "top_issue": "Sanitation & Open Manholes",
+        "color": "#EC4899"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [77.4820, 12.9820],
+            [77.5050, 12.9850],
+            [77.4950, 12.9720],
+            [77.4980, 12.9550],
+            [77.4850, 12.9480],
+            [77.4760, 12.9650],
+            [77.4820, 12.9820]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ward_number": 70,
+        "ward_name": "Rajagopalanagar",
+        "ac_number": 154,
+        "ac_name": "Rajarajeshwari Nagar",
+        "mla_name": "Munirathna",
+        "gba_zone": "West City Corporation",
+        "aee_name": "Er. G. Ravikumar (AEE)",
+        "aee_contact": "+91 80 2839 1205",
+        "health_inspector": "Sri. Mahesh V. (+91 98860 99402)",
+        "office_address": "BBMP Office, Peenya 2nd Stage, Rajagopalanagar",
+        "total_complaints": 31,
+        "critical_count": 3,
+        "in_progress_count": 16,
+        "resolved_count": 12,
+        "resolution_rate": 77.4,
+        "top_issue": "Industrial Waste & Streetlights",
+        "color": "#F59E0B"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [77.5020, 13.0120],
+            [77.5200, 13.0140],
+            [77.5250, 12.9980],
+            [77.5220, 12.9880],
+            [77.5050, 12.9850],
+            [77.4980, 12.9980],
+            [77.5020, 13.0120]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ward_number": 69,
+        "ward_name": "Laggere",
+        "ac_number": 154,
+        "ac_name": "Rajarajeshwari Nagar",
+        "mla_name": "Munirathna",
+        "gba_zone": "West City Corporation",
+        "aee_name": "Er. N. Chandrashekar (AEE)",
+        "aee_contact": "+91 80 2839 4432",
+        "health_inspector": "Sri. Anand Murthy (+91 98860 77312)",
+        "office_address": "BBMP Ward Office, Outer Ring Road, Laggere",
+        "total_complaints": 24,
+        "critical_count": 2,
+        "in_progress_count": 12,
+        "resolved_count": 10,
+        "resolution_rate": 83.3,
+        "top_issue": "Garbage Blackspots",
+        "color": "#10B981"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [77.5180, 13.0280],
+            [77.5320, 13.0290],
+            [77.5360, 13.0120],
+            [77.5250, 12.9980],
+            [77.5200, 13.0140],
+            [77.5180, 13.0280]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ward_number": 42,
+        "ward_name": "Lakshmidevi Nagar",
+        "ac_number": 154,
+        "ac_name": "Rajarajeshwari Nagar",
+        "mla_name": "Munirathna",
+        "gba_zone": "West City Corporation",
+        "aee_name": "Er. T. Srinivas (AEE)",
+        "aee_contact": "+91 80 2837 8100",
+        "health_inspector": "Smt. Kavitha R. (+91 98860 55180)",
+        "office_address": "BBMP Ward Office, 4th Main, Lakshmidevi Nagar",
+        "total_complaints": 18,
+        "critical_count": 1,
+        "in_progress_count": 9,
+        "resolved_count": 8,
+        "resolution_rate": 88.8,
+        "top_issue": "Broken Footpaths",
+        "color": "#6366F1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [77.5020, 13.0320],
+            [77.5180, 13.0280],
+            [77.5200, 13.0140],
+            [77.5020, 13.0120],
+            [77.4950, 13.0220],
+            [77.5020, 13.0320]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ward_number": 41,
+        "ward_name": "Peenya Industrial Area",
+        "ac_number": 154,
+        "ac_name": "Rajarajeshwari Nagar",
+        "mla_name": "Munirathna",
+        "gba_zone": "West City Corporation",
+        "aee_name": "Er. B. Jayaram (AEE)",
+        "aee_contact": "+91 80 2839 9001",
+        "health_inspector": "Sri. Gangadharan (+91 98860 33281)",
+        "office_address": "BBMP Industrial Division Office, 1st Stage, Peenya",
+        "total_complaints": 38,
+        "critical_count": 6,
+        "in_progress_count": 20,
+        "resolved_count": 12,
+        "resolution_rate": 66.6,
+        "top_issue": "Heavy Vehicle Road Damage & Effluents",
+        "color": "#D946EF"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [77.5120, 13.0480],
+            [77.5300, 13.0450],
+            [77.5320, 13.0290],
+            [77.5180, 13.0280],
+            [77.5020, 13.0320],
+            [77.5050, 13.0420],
+            [77.5120, 13.0480]
+          ]
+        ]
+      }
+    }
+  ]
+}

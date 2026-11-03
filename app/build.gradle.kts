@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.google.services)
 }
 
 android {
@@ -44,6 +45,21 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.core.ktx)
     implementation(libs.material)
+    implementation("com.microsoft.onnxruntime:onnxruntime-android:1.18.0")
+
+    // Firebase & Google Auth & Cloud Firestore
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.auth)
+    implementation(libs.firebase.firestore)
+    implementation(libs.play.services.auth)
+    implementation("com.google.android.gms:play-services-location:21.3.0")
+
+    // OneSignal Push Notification SDK
+    implementation(libs.onesignal)
+
+    // OpenStreetMap for Android (OSMDroid)
+    implementation(libs.osmdroid.android)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)

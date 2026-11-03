@@ -1,0 +1,17 @@
+[2026-09-02 10:13:27.659] QQmlApplicationEngine failed to load component
+[2026-09-02 10:13:27.659] qrc:/qt/qml/ReportIt/Admin/qml/Main.qml:18:5: Type Sidebar unavailable
+[2026-09-02 10:13:27.659] qrc:/qt/qml/ReportIt/Admin/qml/components/Sidebar.qml:218:37: Invalid property assignment: int expected
+[2026-09-02 10:13:27.659] Failed to create root QML object for URL: QUrl("qrc:/qt/qml/ReportIt/Admin/qml/Main.qml")
+[2026-09-02 10:15:08.907] QQmlApplicationEngine failed to load component
+[2026-09-02 10:15:08.907] qrc:/qt/qml/ReportIt/Admin/qml/Main.qml:54:9: Type PlaceholderView unavailable
+[2026-09-02 10:15:08.907] qrc:/qt/qml/ReportIt/Admin/qml/views/PlaceholderView.qml:20:13: Cannot assign to non-existent property "horizontalAlignment"
+[2026-09-02 10:15:08.907] Failed to create root QML object for URL: QUrl("qrc:/qt/qml/ReportIt/Admin/qml/Main.qml")
+[2026-09-02 15:52:25.626] Loading QML engine URL: QUrl("qrc:/qt/qml/ReportIt/Admin/qml/Main.qml")
+[2026-09-02 15:52:26.283] Starting app.exec()...
+[2026-09-02 15:52:26.284] Root QML object created successfully: Main_QMLTYPE_69(0x21c6c039120)
+[2026-09-02 15:53:36.068] Loading QML engine URL: QUrl("qrc:/qt/qml/ReportIt/Admin/qml/Main.qml")
+[2026-09-02 15:53:36.639] Starting app.exec()...
+[2026-09-02 15:53:36.645] Root QML object created successfully: Main_QMLTYPE_71(0x1e9a61ffd30)
+[2026-09-02 17:17:45.484] Retrying to obtain clipboard.
+[2026-09-02 17:18:07.487] Retrying to obtain clipboard.
+[2026-09-02 20:31:08.223] Retrying to obtain clipboard.

@@ -1,20 +1,37 @@
 <resources>
-    <string name="app_name">Report-It</string>
-    <string name="tagline">Report. Resolve. Transform.</string>
+    <string name="app_name">Namma Report-It</string>
+    <string name="tagline">Report. Resolve. Transform Bengaluru.</string>
     
     <!-- Navigation -->
     <string name="nav_home">Home</string>
     <string name="nav_reports">My Reports</string>
     <string name="nav_report_issue">Report</string>
-    <string name="nav_map">Issue Map</string>
-    <string name="nav_track">Track</string>
+    <string name="nav_map">Civic Heatmap</string>
+    <string name="nav_track">Track SLA</string>
     <string name="nav_profile">Profile</string>
-    <string name="nav_admin">Admin</string>
+    <string name="nav_admin">BBMP Admin</string>
     
-    <!-- General -->
-    <string name="location_placeholder">📍 Bengaluru, Karnataka</string>
-    <string name="language_btn">🌐 Language</string>
-    <string name="report_cta">🚨 Report an Issue</string>
-    <string name="recent_reports">Recent Reports</string>
-    <string name="civic_impact">Civic Impact</string>
+    <!-- General & Location -->
+    <string name="location_placeholder">Bengaluru, Karnataka</string>
+    <string name="default_ward">Ward 150 - Bellandur, Mahadevapura</string>
+    <string name="language_btn">Language</string>
+    <string name="report_cta">Report Civic Issue</string>
+    <string name="recent_reports">Recent Reports Near You</string>
+    <string name="civic_impact">Civic Redressal Impact</string>
+    <string name="citizen_score_title">Namma Nagarika Score</string>
+    <string name="citizen_score_value">95 / 100 • Civic Champion</string>
+    
+    <!-- Categories -->
+    <string name="cat_pothole">Roads &amp; Potholes</string>
+    <string name="cat_pothole_sub">BBMP Road Infra</string>
+    <string name="cat_garbage">Garbage &amp; Waste</string>
+    <string name="cat_garbage_sub">BBMP Solid Waste</string>
+    <string name="cat_water">Water Leaks &amp; Sewage</string>
+    <string name="cat_water_sub">BWSSB 1916</string>
+    <string name="cat_power">Live Wires &amp; Sparks</string>
+    <string name="cat_power_sub">BESCOM 1912</string>
+    <string name="cat_streetlight">Streetlights &amp; Dark Spots</string>
+    <string name="cat_streetlight_sub">BBMP Electrical</string>
+    <string name="cat_tree">Tree Fall &amp; Traffic Hazard</string>
+    <string name="cat_tree_sub">BBMP Forest / BTP</string>
 </resources>
